@@ -31,7 +31,7 @@
         {
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "replace-me"
             },
             "gridPos": {
                 "h": 1,
@@ -44,7 +44,7 @@
                 {
                     "datasource": {
                         "type": "influxdb",
-                        "uid": "ddsr98u88mygwb"
+                        "uid": "replace-me"
                     },
                     "refId": "A"
                 }
@@ -343,7 +343,7 @@
                             "condition": "AND",
                             "key": "customer",
                             "operator": "=",
-                            "value": "OpenWebinars"
+                            "value": "testcustomer"
                         },
                         {
                             "condition": "AND",
@@ -556,7 +556,7 @@
             },
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "replace-me"
             },
             "description": "This panel shows the CPU usage for the Docker containers monitored by Telegraf.",
             "fieldConfig": {
@@ -1095,7 +1095,7 @@
         {
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "replace-me"
             },
             "gridPos": {
                 "h": 1,
@@ -1108,7 +1108,7 @@
                 {
                     "datasource": {
                         "type": "influxdb",
-                        "uid": "ddsr98u88mygwb"
+                        "uid": "replace-me"
                     },
                     "refId": "A"
                 }
@@ -1300,7 +1300,7 @@
                             "condition": "AND",
                             "key": "customer",
                             "operator": "=",
-                            "value": "DevOpsea"
+                            "value": "testcustomer"
                         },
                         {
                             "condition": "AND",
@@ -1358,7 +1358,7 @@
             },
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "replace-me"
             },
             "description": "This panel shows the memory usage for the Debian system monitored by Telegraf.",
             "fieldConfig": {
@@ -1487,7 +1487,7 @@
                             "condition": "AND",
                             "key": "customer",
                             "operator": "=",
-                            "value": "DevOpsea"
+                            "value": "testcustomer"
                         },
                         {
                             "condition": "AND",
@@ -1545,7 +1545,7 @@
             },
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "replace-me"
             },
             "description": "This panel shows the disk usage for the Debian system monitored by Telegraf.",
             "fieldConfig": {
@@ -1651,7 +1651,7 @@
                     "measurement": "disk",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT \"free\" FROM \"disk\" WHERE (\"host\" = 'WSL-debian' AND \"customer\" = 'DevOpsea' AND \"os\" = 'Linux' AND \"environment\" = 'Dev' AND \"path\" = '/mnt/c') AND $timeFilter GROUP BY \"host\"::tag",
+                    "query": "SELECT \"free\" FROM \"disk\" WHERE (\"host\" = 'WSL-debian' AND \"customer\" = 'testcustomer' AND \"os\" = 'Linux' AND \"environment\" = 'Dev' AND \"path\" = '/mnt/c') AND $timeFilter GROUP BY \"host\"::tag",
                     "rawQuery": false,
                     "refId": "A",
                     "resultFormat": "time_series",
@@ -1675,7 +1675,7 @@
                             "condition": "AND",
                             "key": "customer",
                             "operator": "=",
-                            "value": "DevOpsea"
+                            "value": "testcustomer"
                         },
                         {
                             "condition": "AND",
@@ -1701,7 +1701,7 @@
                     "alias": "$tag_host",
                     "datasource": {
                         "type": "influxdb",
-                        "uid": "ddsr98u88mygwb"
+                        "uid": "replace-me"
                     },
                     "groupBy": [
                         {
@@ -1715,7 +1715,7 @@
                     "measurement": "disk",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT \"free\" FROM \"disk\" WHERE (\"host\" = 'WSL-debian' AND \"customer\" = 'DevOpsea' AND \"os\" = 'Linux' AND \"environment\" = 'Dev' AND \"path\" = '/mnt/c') AND $timeFilter GROUP BY \"host\"::tag",
+                    "query": "SELECT \"free\" FROM \"disk\" WHERE (\"host\" = 'WSL-debian' AND \"customer\" = 'testcustomer' AND \"os\" = 'Linux' AND \"environment\" = 'Dev' AND \"path\" = '/mnt/c') AND $timeFilter GROUP BY \"host\"::tag",
                     "rawQuery": false,
                     "refId": "B",
                     "resultFormat": "time_series",
@@ -1739,7 +1739,7 @@
                             "condition": "AND",
                             "key": "customer",
                             "operator": "=",
-                            "value": "DevOpsea"
+                            "value": "testcustomer"
                         },
                         {
                             "condition": "AND",
@@ -1768,7 +1768,7 @@
         {
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "replace-me"
             },
             "gridPos": {
                 "h": 1,
@@ -1781,7 +1781,7 @@
                 {
                     "datasource": {
                         "type": "influxdb",
-                        "uid": "ddsr98u88mygwb"
+                        "uid": "replace-me"
                     },
                     "refId": "A"
                 }
@@ -1827,7 +1827,7 @@
             },
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "replace-me"
             },
             "description": "This panel shows the CPU usage for the Windows 11 system monitored by Telegraf.",
             "fieldConfig": {
@@ -1961,13 +1961,13 @@
                         {
                             "key": "host",
                             "operator": "=",
-                            "value": "devopsea-dev"
+                            "value": "testcustomer-dev"
                         },
                         {
                             "condition": "AND",
                             "key": "customer",
                             "operator": "=",
-                            "value": "DevOpsea"
+                            "value": "testcustomer"
                         },
                         {
                             "condition": "AND",
@@ -2019,7 +2019,7 @@
             },
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "replace-me"
             },
             "description": "This panel shows the memory usage for the Windows 11 system monitored by Telegraf.",
             "fieldConfig": {
@@ -2139,13 +2139,13 @@
                         {
                             "key": "host",
                             "operator": "=",
-                            "value": "devopsea-dev"
+                            "value": "testcustomer-dev"
                         },
                         {
                             "condition": "AND",
                             "key": "customer",
                             "operator": "=",
-                            "value": "DevOpsea"
+                            "value": "testcustomer"
                         },
                         {
                             "condition": "AND",
@@ -2197,7 +2197,7 @@
             },
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "replace-me"
             },
             "description": "This panel shows the disk usage for the Windows 11 system monitored by Telegraf.",
             "fieldConfig": {
@@ -2331,13 +2331,13 @@
                         {
                             "key": "host",
                             "operator": "=",
-                            "value": "devopsea-dev"
+                            "value": "testcustomer-dev"
                         },
                         {
                             "condition": "AND",
                             "key": "customer",
                             "operator": "=",
-                            "value": "DevOpsea"
+                            "value": "testcustomer"
                         },
                         {
                             "condition": "AND",
