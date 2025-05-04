@@ -1,6 +1,6 @@
 # Monitoring with Docker Compose using InfluxDB, Telegraf and Grafana
 
-This repository contains a Docker Compose setup for creating containers for InfluxDB, Telegraf, and Grafana, providing a comprehensive monitoring solution.
+This repository contains a Docker Compose setup for creating containers for InfluxDB, Telegraf, and Grafana, providing a comprehensive monitoring solution. It was forked from https://github.com/jersonmartinez/docker-compose-influxdb-telegraf-grafana and adjusted to make it work for personal usage in MacOS via Docker.
 
 ## Infrastructure Model
 
@@ -11,7 +11,7 @@ This repository contains a Docker Compose setup for creating containers for Infl
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/jersonmartinez/docker-compose-influxdb-telegraf-grafana.git
+git clone https://github.com/gmusliaj/docker-compose-influxdb-telegraf-grafana.git
 cd docker-compose-influxdb-telegraf-grafana
 ```
 
@@ -65,8 +65,6 @@ docker-compose up -d
 We provide detailed guides for configuring Telegraf in various environments:
 
 - [Telegraf on Ubuntu](docs/install_telegraf_on_ubuntu.md)
-- [Telegraf on Windows Subsystem for Linux (WSL) - Debian](docs/install_telegraf_on_wsl_linux.md)
-- [Telegraf on Windows](docs/install_telegraf_on_windows.md)
 - [Telegraf in Docker](docs/explaining_telegraf.md#monitorizar-contenedores-docker)
 
 For a comprehensive explanation of Telegraf configuration across different platforms, refer to our [Telegraf Configuration Guide](docs/explaining_telegraf.md).
