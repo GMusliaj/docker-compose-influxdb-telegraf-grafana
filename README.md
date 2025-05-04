@@ -21,7 +21,7 @@ cd docker-compose-influxdb-telegraf-grafana
 docker-compose up -d
 ```
 
-![Deployment Output](https://github.com/user-attachments/assets/0a9f8a91-66f6-4aec-a71c-16f5d6051b59)
+![Deployment Output](/docs/dashboard.png)
 
 ## Detailed Setup Guide
 
@@ -60,14 +60,40 @@ docker-compose up -d
 1. Open Grafana and add InfluxDB as a data source.
 2. Create dashboards and panels to visualize the metrics collected by Telegraf.
 
-## Telegraf Configuration for Different Environments
+### Triggering Cron Job Error in Logs
 
-We provide detailed guides for configuring Telegraf in various environments:
+You can trigger a Cron Job Error in the Log files by running the following script locally:
 
-- [Telegraf on Ubuntu](docs/install_telegraf_on_ubuntu.md)
-- [Telegraf in Docker](docs/explaining_telegraf.md#monitorizar-contenedores-docker)
+```bash
+./trigger-cron-error-log.sh
+```
 
-For a comprehensive explanation of Telegraf configuration across different platforms, refer to our [Telegraf Configuration Guide](docs/explaining_telegraf.md).
+After running the script above in the Telegraf container will be generated the following logs:
+
+```bash
+root@53c892ae73fe:/# cat /var/log/syslog
+May 04 21:57:56 myhost CRON[12346]: (root) CMD (my-script.sh 2>&1 | logger)
+May 04 21:57:56 myhost my-script.sh[12347]: ERROR: Unable to connect to DB
+May 04 21:58:22 myhost CRON[12346]: (root) CMD (my-script.sh 2>&1 | logger)
+May 04 21:58:22 myhost my-script.sh[12347]: ERROR: Unable to connect to DB
+May 04 21:58:23 myhost CRON[12346]: (root) CMD (my-script.sh 2>&1 | logger)
+May 04 21:58:23 myhost my-script.sh[12347]: ERROR: Unable to connect to DB
+May 04 21:58:24 myhost CRON[12346]: (root) CMD (my-script.sh 2>&1 | logger)
+May 04 21:58:24 myhost my-script.sh[12347]: ERROR: Unable to connect to DB
+May 04 21:58:25 myhost CRON[12346]: (root) CMD (my-script.sh 2>&1 | logger)
+May 04 21:58:25 myhost my-script.sh[12347]: ERROR: Unable to connect to DB
+May 04 21:58:26 myhost CRON[12346]: (root) CMD (my-script.sh 2>&1 | logger)
+May 04 21:58:26 myhost my-script.sh[12347]: ERROR: Unable to connect to DB
+May 04 21:58:27 myhost CRON[12346]: (root) CMD (my-script.sh 2>&1 | logger)
+May 04 21:58:27 myhost my-script.sh[12347]: ERROR: Unable to connect to DB
+May 04 21:58:27 myhost CRON[12346]: (root) CMD (my-script.sh 2>&1 | logger)
+May 04 21:58:27 myhost my-script.sh[12347]: ERROR: Unable to connect to DB
+May 04 21:58:28 myhost CRON[12346]: (root) CMD (my-script.sh 2>&1 | logger)
+May 04 21:58:28 myhost my-script.sh[12347]: ERROR: Unable to connect to DB
+```
+
+This is a simple usecase which shows when there is an `ERROR` in the /var/sys/logs and gets sent to InfluxDB and then visualized in Grafana Dashboard. You can configure this behavior anytime under `telegraf/telegraf.conf`
+
 
 ## Service Descriptions
 
