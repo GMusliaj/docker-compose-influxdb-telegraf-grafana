@@ -49,7 +49,7 @@ services:
       - monitoring  # Connect the Nginx container to the monitoring network
 
   influxdb:
-    image: influxdb:1.8-alpine
+    image: arm64v8/influxdb:1.8
     container_name: influxdb
     restart: always
     environment:
@@ -87,4 +87,4 @@ volumes:
 
 networks:
   monitoring:
-    external: true  # Use an external network named 'monitoring'
+    external: false  # Use an external network named 'monitoring'
